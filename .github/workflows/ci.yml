@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
     - name: Resolve
       run: swift package resolve
     - name: Build
