@@ -43,11 +43,7 @@ public struct Property {
 
 public extension Property {
     var nullable: Bool {
-        if case let .reference(ref) = schema.type {
-            return !required || ref.value.metadata.nullable
-        } else {
-            return !required || schema.metadata.nullable
-        }
+        return !required || schema.metadata.nullable
     }
 }
 
