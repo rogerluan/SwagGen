@@ -5,7 +5,7 @@
 
 import Foundation
 
-public enum SingleAnimal: Codable, Equatable {
+public enum SingleAnimalWithObjectType: Codable, Equatable {
     case cat(Cat)
     case dog(Dog)
 
@@ -16,8 +16,6 @@ public enum SingleAnimal: Codable, Equatable {
         case "cat":
             self = .cat(try Cat(from: decoder))
         case "dog":
-            self = .dog(try Dog(from: decoder))
-        case "woof":
             self = .dog(try Dog(from: decoder))
         default:
             throw DecodingError.dataCorrupted(DecodingError.Context.init(codingPath: decoder.codingPath, debugDescription: "Couldn't find type to decode with discriminator \(discriminator)"))

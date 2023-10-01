@@ -2,6 +2,19 @@
 
 ## Next Version
 
+### Changed
+- Updated `StencilSwiftKit` to 2.10.1 and therefore Stencil to 0.15.1 #309 @flex-tackgyu
+
+## 4.7.0
+
+### Changed
+- Expanded `IntegerFormat` to support more fixed width integers #301 @wqz-leo
+- Append more types of values to MultipartFormData including arrays and dictionaries #293 @0x0c
+
+### Fixed
+- Fixed duplicated switch cases when using explicit mappings in oneOf discriminator #297 @JanC
+- Prefer generating composed types (oneOf, anyOf, ..) if the schema contains both `type: object` and `oneOf` #302 @JanC
+
 ## 4.6.0
 
 ### Fixed
@@ -10,8 +23,6 @@
 ### Changed
 - Improved `CodeFormatter` efficiency #272 @zntfdr
 - Updated Alamofire used in template to 5.4.4 #283 @0x0c
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/4.5.0...4.6.0)
 
 ## 4.5.0
 
@@ -23,8 +34,6 @@
 ### Fixed
 - Fixed sporadic crashes due to malformed URLs #268 @marcelvoss
 - Fixed generation of inline types for `allOf` #267 @nicholascross, #278 @liamnichols
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/4.4.0...4.5.0)
 
 ## 4.4.0
 
@@ -45,8 +54,6 @@
 ### Internal
 - SwagGen minimum Swift version is 5.0
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/4.3.1...4.4.0)
-
 ## 4.3.1
 
 ### Fixed
@@ -56,8 +63,6 @@
 
 ### Internal
  - Removed needless `Array` initialization. #212 @RomanPodymov
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/4.3.0...4.3.1)
 
 ## 4.3.0
 
@@ -77,8 +82,6 @@
 - Fixed missing customization of JSONEncoder instance to encode request's body #147
 - Fixed string uploads #161
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/4.2.0...4.3.0)
-
 ## 4.2.0
 
 ### Swift Template Changes
@@ -94,8 +97,6 @@
 ### Changes
 - Update dependencies
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/4.1.0...4.2.0)
-
 ## 4.1.0
 
 ### Added
@@ -107,8 +108,6 @@
 
 ### Changed:
 - Updated codebase to Swift 5 and dropped Swift 4.2 #139
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/4.0.0...4.1.0)
 
 ## 4.0.0
 
@@ -147,8 +146,6 @@
 - Removed support for Swagger 2 #118
 - Removed Swift 4.1 support #134
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/3.0.2...4.0.0)
-
 ## 3.0.2
 
 ### Added
@@ -163,8 +160,6 @@
 - Updated to Swift 4.2
 - Updated YAMS, Rainbow and SwiftCLI
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/3.0.1...3.0.2)
-
 ## 3.0.1
 
 ### Added
@@ -172,8 +167,6 @@
 
 ### Fixed
 - Fixed crash in Swift template when not using any RequestBehaviours #108
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/3.0.0...3.0.1)
 
 ## 3.0.0
 
@@ -206,8 +199,6 @@
 - Fix empty string field decoding in YAML #101
 - Escape `Protocol` in swift templates
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/2.1.2...3.0.0)
-
 ## 2.1.2
 
 ### Added
@@ -217,8 +208,6 @@
 - Fixed nil `AnyCodable` values being encoded as null
 - Fixed inbuilt templates not being found in Mint installations
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/2.1.1...2.1.2)
-
 ## 2.1.1
 
 ### Added
@@ -227,8 +216,6 @@
 ### Fixed
 - Fixed homebrew installation on machines with both Xcode 9.3 and Command line tools installed
 - Fixed `UUID` parameter encoding #81
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/2.1.0...2.1.1)
 
 ## 2.1.0
 
@@ -240,8 +227,6 @@
 - Fixed regression where request bodies were not being encoding properly #76
 - Fixed `safeOptionalDecoding` not working on optional Arrays
 - Fixed `date-time` not decoding in some cases #77
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/2.0.0...2.1.0)
 
 ## 2.0.0
 
@@ -275,8 +260,6 @@
 - **BREAKING** Swift template: models no longer have `init(jsonDictionary: JSONDictionary)` or `encode() -> JSONDictionary` functions #61
 - Swift template: removed `JSONUtilities` dependency #61
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/1.2.0...2.0.0)
-
 ## 1.2.0
 
 ### Added
@@ -287,8 +270,6 @@
 - Fixed Swift 4.0.2 warnings
 - Fixed Brew install
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/1.1.0...1.2.0)
-
 ## 1.1.0
 
 ### Added
@@ -298,8 +279,6 @@
 ### Fixed
 - fixed SPM installation issue
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/1.0.0...1.1.0)
-
 ## 1.0.0
 
 ### Added
@@ -308,8 +287,6 @@
 ### Changed
 - Updated project to Swift 4 #42
 - Updated Swift templates to Swift 4 #42
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.6.1...1.0.0)
 
 ## 0.6.1
 
@@ -322,8 +299,6 @@
 
 ### Fixed
 - Fixed parameters with a file type not being generated
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.6.0...0.6.1)
 
 ## 0.6.0
 
@@ -354,8 +329,6 @@ This includes a large rewrite with a lot more test cases so many more specs shou
 - Within templates `tags` is now just a list of all tag names. The previous tag dictionary which contains `name` and `operations` has been moved to `operationsByTag`
 - request response enum cases have been renamed
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.5.3...0.6.0)
-
 ## 0.5.3
 
 ### Swift template fixes
@@ -375,8 +348,6 @@ This includes a large rewrite with a lot more test cases so many more specs shou
 ### Added
 Added suite of tests for parsing, generating and compiling templates from a list of specs. Will improve stability and help prevent regressions. Still some work to do in this area
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.5.2...0.5.3)
-
 ## 0.5.2
 
 ### Added
@@ -385,8 +356,6 @@ Added suite of tests for parsing, generating and compiling templates from a list
 ### Changed
 - Replaced `CustomDebugStringConvertible` with `PrettyPrinted` conformance on Models, so you can specify your own `CustomDebugStringConvertible`. Same string is available at `model.prettyPrinted`
 - Moved generated request enums and anonymous schema from APIRequest.Request to one level higher in scope
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.5.1...0.5.2)
 
 ## 0.5.1
 
@@ -399,8 +368,6 @@ Added suite of tests for parsing, generating and compiling templates from a list
 
 ### Fixed
 - Fixed api name not being replaced in `Decoding.swift` anymore
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.5.0...0.5.1)
 
 ## 0.5.0
 
@@ -438,8 +405,6 @@ Models, Requests, Errors and Responses now have CustomStringConvertible and/or C
 ### Fixed
 - Path parameters are no longer also encoded as url parameters in the request template
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.4.1...0.5.0)
-
 ## 0.4.1
 
 ### Fixed
@@ -450,8 +415,6 @@ Improved the generation of complicated specs:
 - escape symbols starting with numbers
 - better support for deeply nested arrays and dictionaries
 - fixed nested enums
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.4.0...0.4.1)
 
 ## 0.4.0
 
@@ -471,15 +434,11 @@ Improved the generation of complicated specs:
 ### Fixed
 - Swift names and types are now escaped with a greater range of swift keywords
 
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.3...0.4)
-
 ## 0.3.0
 
 ### Fixed
 - Operations with multiple path variables now properly generate an operationId. #11  Thanks @HSchultjan
 - Operation parameters that contain anonymous schemas (those that don't reference a definition schema but define a schema inline) are now genererated properly as nested structs within the APIRequest #13
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.2...0.3)
 
 ## 0.2.0
 
@@ -489,8 +448,6 @@ Improved the generation of complicated specs:
 ### Changed
 - `Property` and `Parameter` have lost their `rawType` and `rawName` properties in favour of the above, so they are now `raw.type` and `raw.name`
 - Upgraded Stencil to [0.9](https://github.com/kylef/Stencil/releases/tag/0.9.0)
-
-[Commits](https://github.com/yonaskolb/SwagGen/compare/0.1...0.2)
 
 ## 0.1.0
 - First official release
